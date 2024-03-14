@@ -1,0 +1,49 @@
+body{
+  background: linear-gradient(120deg,rgb(8, 8, 112),rgb(1, 1, 65),black);
+  height: fit-content;
+  color: blanchedalmond;
+}
+
+.Container{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.holder{
+  border-radius: 15px;
+  border: 2px solid wheat;
+  color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-between;
+  align-items:center;
+  min-width: 80%;
+  max-width: max-content;
+  padding: 2px;
+  height: 10rem;
+  background-color: rgb(35, 35, 35);
+  margin: 10px 8px;
+}
+
+.holder img{
+  margin: auto 25px;
+}
+
+.holder button{
+  
+  padding: 10px;
+  margin: 2px 30px;
+}
+
+.box{
+  text-align: center;
+}
+
+.rowL{
+  display: flex;
+  flex-direction: column;
+}
