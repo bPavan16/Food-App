@@ -47,3 +47,45 @@ body{
   display: flex;
   flex-direction: column;
 }
+
+.arrL{
+  border-radius: 15px;
+  border: 2px solid wheat;
+  color: azure;
+  flex-wrap: wrap;
+  min-width: 80%;
+  max-width: max-content;
+  min-height: 200px;
+  max-height: max-content;
+  padding: 2px;
+  background-color: rgb(35, 35, 35);
+  margin: 10px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.arrL p{
+  font-size: large;
+}
+
+
+#exampleModal{
+  background-color: black !important;
+  color: rgb(21, 21, 21);
+}
+
+#BdModel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+}
+#BdModel input{
+  margin: 8px;
+  border: solid 2px black;
+  
+}

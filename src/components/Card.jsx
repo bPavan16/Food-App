@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 
-export default function Card({ image, item = "FOOD", Price, SetPrice, rate }) {
-  const [inital, setInital] = useState(0);
-
+export default function Card({
+  image,
+  item = "FOOD",
+  Price,
+  SetPrice,
+  rate,
+  inital,
+  setInital,
+}) {
   let changePrice = (e) => {
     let old = Price;
     old = old + e * rate;

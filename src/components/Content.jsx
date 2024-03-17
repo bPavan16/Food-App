@@ -1,15 +1,16 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 import Card from "./Card";
+import Payment from "./Payment";
 
 export default function Content() {
   const [Price, setPrice] = useState(0);
-  let sty = "none";
+  const [pizza, setpizza] = useState(0);
+  const [Burger, setBurger] = useState(0);
+  const [Coffee, setCoffee] = useState(0);
 
-  let hide = useCallback(() => {
-    if (Price != 0) {
-      sty = "inline";
-    } else sty = "none";
-  }, [Price, setPrice]);
+  let prate = 200;
+  let brate = 100;
+  let crate = 50;
 
   return (
     <>
@@ -19,29 +20,39 @@ export default function Content() {
           item="PIZZA"
           Price={Price}
           SetPrice={setPrice}
-          rate={200}
-         
+          rate={prate}
+          inital={pizza}
+          setInital={setpizza}
         />
         <Card
           image={"https://pranavbhatdinerapp.netlify.app/images/hamburger.png"}
           item="BURGER"
           Price={Price}
           SetPrice={setPrice}
-          rate={100}
+          rate={brate}
+          inital={Burger}
+          setInital={setBurger}
         />
         <Card
           image={"https://pranavbhatdinerapp.netlify.app/images/coffee-cup.png"}
           item="COFFEE"
           Price={Price}
           SetPrice={setPrice}
-          rate={50}
+          rate={crate}
+          inital={Coffee}
+          setInital={setCoffee}
         />
-        
-        <br />
-        <h1>Order</h1>
-        <h1 id="me"> Total Price = {Price} </h1>
-        <br />
-        <button>PAY</button>
+
+        {pizza > 0 || Burger > 0 || Coffee > 0 ? (
+          <Payment
+            pizza={pizza}
+            burger={Burger}
+            coffee={Coffee}
+            Price={Price}
+          />
+        ) : (
+          <></>
+        )}
       </div>
     </>
   );

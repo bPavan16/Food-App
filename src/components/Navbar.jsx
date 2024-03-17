@@ -10,6 +10,7 @@ export default function Navbar() {
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             JUST ORDER
+            <img src="" alt="" />
           </a>
           <button
             className="navbar-toggler"
