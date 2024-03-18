@@ -1,54 +1,63 @@
-body{
-  background: linear-gradient(120deg,rgb(8, 8, 112),rgb(1, 1, 65),black);
+body {
+  background-color: black;
   height: fit-content;
   color: blanchedalmond;
 }
 
-.Container{
+.Container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+
 }
 
-.holder{
+.holder {
   border-radius: 15px;
   border: 2px solid wheat;
   color: azure;
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-between;
-  align-items:center;
-  min-width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 50%;
   max-width: max-content;
   padding: 2px;
   height: 10rem;
-  background-color: rgb(35, 35, 35);
+  background-color: rgb(9, 2, 31);
   margin: 10px 8px;
 }
 
-.holder img{
+.holder img {
   margin: auto 25px;
 }
 
-.holder button{
-  
+.holder p {
+  font-size: 2.4vh;
+}
+
+.holder button {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
   padding: 10px;
   margin: 2px 30px;
 }
 
-.box{
+.box {
   text-align: center;
 }
 
-.rowL{
+.rowL {
   display: flex;
   flex-direction: column;
 }
 
-.arrL{
+.arrL {
   border-radius: 15px;
   border: 2px solid wheat;
   color: azure;
@@ -57,7 +66,7 @@ body{
   max-width: max-content;
   min-height: 200px;
   max-height: max-content;
-  padding: 2px;
+  padding: 5px;
   background-color: rgb(35, 35, 35);
   margin: 10px 8px;
   display: flex;
@@ -66,17 +75,29 @@ body{
   justify-content: center;
 }
 
-.arrL p{
-  font-size: large;
+.arrL p {
+  font-size: 3vh;
 }
 
+.arrL h1 {
+  font-size: 2.5em;
+}
 
-#exampleModal{
+.clr {
+  height: 8px;
+  width: 8px;
+  font-size: smaller;
+  background: none;
+  border: none;
+  color: aquamarine;
+}
+
+#exampleModal {
   background-color: black !important;
   color: rgb(21, 21, 21);
 }
 
-#BdModel{
+#BdModel {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,8 +105,9 @@ body{
   flex-direction: column;
 
 }
-#BdModel input{
+
+#BdModel input {
   margin: 8px;
   border: solid 2px black;
-  
+
 }

@@ -5,18 +5,80 @@ export default function Payment({
   burger = 0,
   coffee = 0,
   Price = 0,
+  setPrice,
+  setCoffee,
+  setBurger,
+  setpizza,
 }) {
+  let prate = 200;
+  let brate = 100;
+  let crate = 50;
+
+  let ChangePrice = (rate, count) => {
+    let curr = Price;
+    curr = curr - rate * count;
+    setPrice(curr);
+  };
+
+  let clearPizza = () => {
+    console.log("clicked");
+    let c = pizza;
+    ChangePrice(prate, c);
+    setpizza(0);
+  };
+
+  let clearBurger = () => {
+    console.log("clicked");
+    let c = burger;
+    ChangePrice(brate, c);
+    setBurger(0);
+  };
+
+  let clearCoffee = () => {
+    console.log("clicked");
+    let c = coffee;
+    ChangePrice(crate, c);
+    setCoffee(0);
+  };
+
   return (
     <>
       <div className="arrL">
         <br />
         <h1>Your Order : </h1>
         <br />
-        {pizza > 0 ? <p className="">Pizza x({pizza})</p> : <></>}
-        {burger > 0 ? <p className="">Burger x({burger})</p> : <></>}
-        {coffee > 0 ? <p className="">Coffee x({coffee}) </p> : <></>}
+        {pizza > 0 ? (
+          <p className="">
+            Pizza x({pizza}){" "}
+            <button className="clr" id="pclear" onClick={clearPizza}>
+              (CLEAR)
+            </button>
+          </p>
+        ) : (
+          <></>
+        )}
+        {burger > 0 ? (
+          <p className="">
+            Burger x({burger}){" "}
+            <button className="clr" id="bclear" onClick={clearBurger}>
+              (CLEAR)
+            </button>
+          </p>
+        ) : (
+          <></>
+        )}
+        {coffee > 0 ? (
+          <p className="">
+            Coffee x({coffee}){" "}
+            <button className="clr" id="cclear" onClick={clearCoffee}>
+              (CLEAR)
+            </button>{" "}
+          </p>
+        ) : (
+          <></>
+        )}
         <br />
-        <h1 id="me"> Total Price = {Price} </h1>
+        <h2 id="me"> Total Price = {Price} </h2>
         <br />
 
         <button

@@ -49,6 +49,11 @@ export default function Content() {
             burger={Burger}
             coffee={Coffee}
             Price={Price}
+            setPrice={setPrice}
+            setCoffee={setCoffee}
+            setBurger={setBurger}
+            setpizza={setpizza}
+          
           />
         ) : (
           <></>
