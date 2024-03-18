@@ -87,7 +87,7 @@ export default function Payment({
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Launch demo modal
+          Enter Credentials 
         </button>
 
         <div
