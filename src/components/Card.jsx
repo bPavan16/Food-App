@@ -44,7 +44,7 @@ export default function Card({
           <button className="BTN" onClick={Dec}>
             -
           </button>
-          <p className="">Item = {inital}</p>
+          <p id="MyI" >ITEMS : {inital}</p>
         </div>
       </div>
     </>

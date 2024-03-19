@@ -1,6 +1,7 @@
 body {
-  background-color: black;
-  height: fit-content;
+  background-color: rgb(10, 10, 51);
+  min-height: fit-content;
+  max-height: max-content;
   color: blanchedalmond;
 }
 
@@ -25,7 +26,7 @@ body {
   max-width: max-content;
   padding: 2px;
   height: 10rem;
-  background-color: rgb(9, 2, 31);
+  background-color: rgb(5, 0, 19);
   margin: 10px 8px;
 }
 
@@ -55,7 +56,10 @@ body {
 .rowL {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .arrL {
   border-radius: 15px;
@@ -79,6 +83,7 @@ body {
   font-size: 3vh;
 }
 
+
 .arrL h1 {
   font-size: 2.5em;
 }
@@ -86,7 +91,7 @@ body {
 .clr {
   height: 8px;
   width: 8px;
-  font-size: smaller;
+  font-size: 2vh;
   background: none;
   border: none;
   color: aquamarine;
@@ -110,4 +115,8 @@ body {
   margin: 8px;
   border: solid 2px black;
 
+}
+
+#MyI {
+  font-size: medium;
 }

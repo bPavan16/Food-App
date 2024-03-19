@@ -9,10 +9,34 @@ export default function Payment({
   setCoffee,
   setBurger,
   setpizza,
+  thank,
+  SetThank
 }) {
   let prate = 200;
   let brate = 100;
   let crate = 50;
+
+  let ip = document.getElementsByClassName("ip");
+
+  let Dopay = () => {
+    let notFilled = 0;
+    Array.from(ip).forEach((ele) => {
+      if (ele.value == "") {
+        alert(`Please Fill the ${ele.placeholder} Details`);
+        return;
+      }
+      return;
+    });
+
+    if (notFilled == 1) return;
+
+    console.log("Payment has been done : ) ");
+    SetThank(1);
+
+    Array.from(ip).forEach((ele) => {
+      ele.value = "";
+    });
+  };
 
   let ChangePrice = (rate, count) => {
     let curr = Price;
@@ -51,7 +75,7 @@ export default function Payment({
           <p className="">
             Pizza x({pizza}){" "}
             <button className="clr" id="pclear" onClick={clearPizza}>
-              (CLEAR)
+              (remove)
             </button>
           </p>
         ) : (
@@ -61,7 +85,7 @@ export default function Payment({
           <p className="">
             Burger x({burger}){" "}
             <button className="clr" id="bclear" onClick={clearBurger}>
-              (CLEAR)
+              (remove)
             </button>
           </p>
         ) : (
@@ -71,14 +95,14 @@ export default function Payment({
           <p className="">
             Coffee x({coffee}){" "}
             <button className="clr" id="cclear" onClick={clearCoffee}>
-              (CLEAR)
+              (remove)
             </button>{" "}
           </p>
         ) : (
           <></>
         )}
         <br />
-        <h2 id="me"> Total Price = {Price} </h2>
+        <h2 id="me"> Total Price = {Price} Rs </h2>
         <br />
 
         <button
@@ -87,7 +111,7 @@ export default function Payment({
           data-bs-toggle="modal"
           data-bs-target="#exampleModal"
         >
-          Enter Credentials 
+          Enter Credentials
         </button>
 
         <div
@@ -111,10 +135,11 @@ export default function Payment({
                   aria-label="Close"
                 ></button>
               </div>
+
               <div className="modal-body" id="BdModel">
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="number" placeholder="Phone-Number" />
+                <input className="ip" type="text" placeholder="Name" />
+                <input className="ip" type="email" placeholder="Email" />
+                <input className="ip" type="text" placeholder="Phone-Number" />
               </div>
               <div className="modal-footer">
                 <button
@@ -128,7 +153,8 @@ export default function Payment({
                   type="button"
                   className="btn btn-primary"
                   data-bs-dismiss="modal"
-                  id="mebtn"
+                  id="pay"
+                  onClick={Dopay}
                 >
                   Place Order
                 </button>
