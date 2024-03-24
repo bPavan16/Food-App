@@ -10,7 +10,7 @@ export default function Payment({
   setBurger,
   setpizza,
   thank,
-  SetThank
+  SetThank,
 }) {
   let prate = 200;
   let brate = 100;
@@ -23,15 +23,23 @@ export default function Payment({
     Array.from(ip).forEach((ele) => {
       if (ele.value == "") {
         alert(`Please Fill the ${ele.placeholder} Details`);
+        notFilled = 1;
         return;
       }
-      return;
     });
 
     if (notFilled == 1) return;
 
     console.log("Payment has been done : ) ");
     SetThank(1);
+
+    setTimeout(() => {
+      SetThank(0);
+      setBurger(0);
+      setCoffee(0);
+      setpizza(0);
+      setPrice(0);
+    }, 3000);
 
     Array.from(ip).forEach((ele) => {
       ele.value = "";
@@ -139,7 +147,7 @@ export default function Payment({
               <div className="modal-body" id="BdModel">
                 <input className="ip" type="text" placeholder="Name" />
                 <input className="ip" type="email" placeholder="Email" />
-                <input className="ip" type="text" placeholder="Phone-Number" />
+                <input className="ip" type="tel" placeholder="Phone Number" />
               </div>
               <div className="modal-footer">
                 <button

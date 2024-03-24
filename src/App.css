@@ -120,3 +120,21 @@ body {
 #MyI {
   font-size: medium;
 }
+
+#thank {
+  border-radius: 30px;
+  border: solid 2px rgb(62, 3, 31);
+  margin: 10px;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: black;
+  height: fit-content;
+  padding: 10px 30px;
+  min-width: 60%;
+  max-width: fit-content;
+  font-size: 3.5vh;
+  background-color: rgb(255, 175, 3);
+}

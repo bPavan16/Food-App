@@ -34,7 +34,7 @@ export default function Card({
       <div className="holder">
         <img src={image} alt="..." height="80px" />
         <div className="rowL">
-          <p className="box">{item}</p>
+          <h2 className="box">{item}</h2>
           <p className="box">PRICE = {rate} Rs</p>
         </div>
         <div className="rowL">

@@ -62,7 +62,7 @@ export default function Content() {
             SetThank={setThank}
           />
         ) : thank != 0 ? (
-          <></>
+          <Thank />
         ) : (
           <></>
         )}
